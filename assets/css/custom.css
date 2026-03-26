@@ -1,0 +1,43 @@
+/* Hero: don't waste a full viewport on the profile */
+.main .profile {
+    min-height: auto;
+    padding-top: calc(var(--gap) * 3);
+    padding-bottom: calc(var(--gap) * 3);
+}
+
+/* Buttons: 1.5:1 horizontal-to-vertical padding ratio */
+.profile .button {
+    padding: 10px 16px;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Smooth transitions on all interactive elements */
+.nav-link,
+#menu a,
+.footer a,
+.post-entry,
+.tag-entry a {
+    transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+/* Uppercase text gets letter-spacing */
+.post-meta,
+.breadcrumbs span {
+    letter-spacing: 0.05em;
+}
+
+/* Links: distinct blue */
+.post-content a {
+    color: #2563eb;
+}
+.post-content a:hover {
+    color: #1d4ed8;
+}
+
+/* Border-radius scale */
+.post-content img {
+    border-radius: 4px;
+}
+.post-entry {
+    border-radius: 8px;
+}

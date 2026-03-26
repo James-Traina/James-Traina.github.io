@@ -1,0 +1,95 @@
+baseURL: "https://james-traina.github.io/"
+title: James Traina
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+pagination:
+  pagerSize: 20
+
+taxonomies:
+  tag: tags
+
+menu:
+  main:
+    - name: Research
+      url: papers/
+      weight: 1
+    - name: Teaching
+      url: courses/
+      weight: 2
+    - name: Fun
+      url: fun/
+      weight: 3
+
+params:
+  description: "James Traina — Assistant Professor of Finance, NYU Stern Abu Dhabi. Research on markups, market power, and firm behavior."
+  author: James Traina
+  DateFormat: "January 2006"
+  defaultTheme: light
+  hideFooter: false
+  disableThemeToggle: true
+  ShowShareButtons: false
+  ShowReadingTime: false
+  disableSpecial1stPost: true
+  disableAnchoredHeadings: true
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: false
+  ShowAllPagesInArchive: false
+  MainSections: ["papers","courses"]
+  ShowToc: false
+  disableScrollToTop: false
+  TocOpen: true
+  ShowWordCount: false
+  UseHugoToc: true
+  comments: false
+  math: true
+  profileMode:
+    enabled: true
+    title: James Traina
+    subtitle: "I am an Assistant Professor of Finance at NYU Stern Abu Dhabi. I study how firms set prices and wages -- and what happens when they have the power to distort both. My research uses tools from corporate finance and industrial organization to examine markups, markdowns, and the structural underpinnings of investment, pricing, and financing."
+    imageUrl: "picture.jpeg"
+    imageWidth: 160
+    imageHeight: 160
+    buttons:
+      - name: Research
+        url: papers/
+      - name: Teaching
+        url: courses/
+      - name: Fun
+        url: fun/
+
+  socialIcons:
+    - name: cv
+      url: https://drive.google.com/uc?export=download&id=1WMr_ua2RZnOMaluS_mRwDkQT8z8FeTrv
+    - name: email
+      url: mailto:james.traina@nyu.edu
+    - name: googlescholar
+      url: https://scholar.google.com/citations?user=Pjrmo2cAAAAJ
+    - name: GitHub
+      url: https://github.com/James-Traina
+    - name: Twitter
+      url: https://x.com/EconTraina
+
+  assets:
+    disableScrollBarStyle: true
+  cover:
+    hiddenInList: false
+    hiddenInSingle: true
+  label:
+    text: "James Traina"
+    icon: favicon.ico
+    iconHeight: 18
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    guessSyntax: true
+    style: autumn
+  tableOfContents:
+    endLevel: 2
+    ordered: false
+    startLevel: 2
