@@ -5,7 +5,7 @@
     <span class="paper-authors">{% include author-list.html authors=paper.authors %}</span>
     {%- if paper.venue %} <span class="paper-venue">{{ paper.venue }}</span>{% endif %}
   </p>
-  {% if paper.summary %}<p class="paper-summary">{{ paper.summary }}</p>{% endif %}
+  {% if paper.summary %}<p class="paper-summary">{{ paper.summary | smartify }}</p>{% endif %}
   <div class="paper-links">
     {% for link in paper.links %}<a class="button button-small" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>{% endfor %}
   </div>

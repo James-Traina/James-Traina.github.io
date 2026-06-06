@@ -28,8 +28,10 @@ layout: default
     <a class="button" href="{{ '/fun/' | relative_url }}">Fun</a>
   </div>
 </section>
+{% assign sel = site.papers | where_exp: "p", "p.selected" | sort: "date" | reverse %}
+{% if sel.size > 0 %}
 <section class="selected">
   <h2>Selected work</h2>
-  {% assign sel = site.papers | where_exp: "p", "p.selected" | sort: "date" | reverse %}
   {% for paper in sel %}{% include paper-entry.html paper=paper %}{% endfor %}
 </section>
+{% endif %}
