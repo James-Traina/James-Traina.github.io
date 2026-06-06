@@ -1,0 +1,220 @@
+---
+---
+/* ===== Tokens (site-local) ===== */
+:root {
+  --gap: 24px;
+  --radius: 8px;
+  --radius-small: 4px;
+  --main-width: 720px;
+  --theme: #ffffff;
+  --primary: #1e1e1e;
+  --secondary: #6c6c6c;
+  --border: #eeeeee;
+  --surface: #f8f8f8;
+  --link: #2563eb;
+  --link-hover: #1d4ed8;
+}
+
+/* ===== Base ===== */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--primary);
+  background: var(--theme);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { line-height: 1.25; }
+
+img {
+  max-width: 100%;
+  border-radius: var(--radius-small);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.main {
+  max-width: var(--main-width);
+  margin: 0 auto;
+  padding: 0 var(--gap) calc(var(--gap) * 2);
+}
+
+.main h1 { font-size: 26px; margin: calc(var(--gap) * 1.5) 0 0; }
+.main h2 { font-size: 21px; margin: calc(var(--gap) * 1.5) 0 0; }
+
+/* Prose links: distinct blue. Buttons opt out via :not(). */
+.main p a:not(.button),
+.main li a:not(.button) {
+  color: var(--link);
+}
+.main p a:not(.button):hover,
+.main li a:not(.button):hover {
+  color: var(--link-hover);
+}
+
+/* ===== Header ===== */
+.header { border-bottom: 1px solid var(--border); }
+
+.header-inner {
+  max-width: var(--main-width);
+  margin: 0 auto;
+  padding: 0 var(--gap);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-name { font-weight: 700; }
+.site-name:hover { color: var(--link); }
+
+.nav { display: flex; gap: 18px; }
+.nav a { color: var(--secondary); }
+.nav a:hover { color: var(--primary); }
+
+/* ===== Profile hero (compact — never full-viewport) ===== */
+.profile {
+  text-align: center;
+  padding: calc(var(--gap) * 3) 0 calc(var(--gap) * 2);
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin: var(--gap) 0 0;
+  font-size: 28px;
+}
+
+.profile-bio {
+  max-width: 560px;
+  margin: calc(var(--gap) * 0.5) auto 0;
+  color: var(--secondary);
+}
+.profile-bio p { margin: 0; }
+
+.profile-icons {
+  margin-top: var(--gap);
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.profile-icons a {
+  display: inline-flex;
+  padding: 6px;
+  border-radius: var(--radius-small);
+  color: var(--primary);
+}
+.profile-icons a:hover { color: var(--link); }
+.profile-icons svg { width: 24px; height: 24px; }
+
+.profile-buttons {
+  margin-top: var(--gap);
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ===== Buttons (10px/16px = 1.5:1 ratio) ===== */
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  font-size: 15px;
+  font-weight: 500;
+}
+.button:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
+.button-small {
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: var(--radius-small);
+}
+
+/* ===== Paper entries ===== */
+.paper-entry {
+  padding: var(--gap) 0;
+  border-bottom: 1px solid var(--border);
+}
+.paper-entry:last-of-type { border-bottom: none; }
+
+.paper-title { margin: 0; font-size: 19px; }
+.paper-title a:hover { color: var(--link); }
+
+.paper-meta {
+  margin: 6px 0 0;
+  color: var(--secondary);
+  font-size: 15px;
+}
+.paper-venue::before { content: "·"; margin: 0 6px; }
+
+.paper-summary { margin: 8px 0 0; font-size: 15px; }
+
+.paper-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ===== Single paper page ===== */
+.paper .page-title { margin-bottom: 0; }
+.paper .paper-meta { margin-top: 8px; }
+.paper .paper-links { margin-top: 14px; }
+.paper .content { margin-top: calc(var(--gap) * 0.75); }
+
+/* ===== Course entries ===== */
+.course-entry {
+  padding: var(--gap) 0;
+  border-bottom: 1px solid var(--border);
+}
+.course-entry:last-of-type { border-bottom: none; }
+
+.course-entry h2 { margin: 0; font-size: 20px; }
+
+.course-meta {
+  margin: 4px 0 0;
+  color: var(--secondary);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em; /* uppercase always gets letter-spacing */
+}
+
+/* ===== Footer ===== */
+.footer {
+  border-top: 1px solid var(--border);
+  margin-top: calc(var(--gap) * 2);
+  padding: var(--gap);
+  text-align: center;
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .header-inner { padding: 0 16px; }
+  .main { padding: 0 16px calc(var(--gap) * 2); }
+  .profile { padding: calc(var(--gap) * 2) 0 var(--gap); }
+  .profile-photo { width: 128px; height: 128px; }
+}
