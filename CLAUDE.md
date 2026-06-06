@@ -22,6 +22,8 @@ Jekyll with a bespoke minimal theme: three layouts, five includes, one styleshee
 ### Site Conventions
 
 - Papers are single markdown files in `_papers/`. Front matter: `title`, `authors` (full list), `date`, `category` (working | published | other), `venue` (published/other only), `links` (label + url pairs), `summary`, `selected` (homepage feature flag). Body is the abstract or citation.
+- `category` must be exactly one of those three values — anything else silently drops the paper from the Research page groups (it still gets its own page). Glance at the Research page after adding.
+- Working papers sort by `date` descending, but their dates are display ranks, not real dates — give a new working paper a later date than the current top entry to list it first. Publications carry real dates.
 - Courses are markdown files in `_courses/`, rendered inline on the Teaching page — no individual course pages.
 - Adding a paper = adding one file to `_papers/` and pushing. That's the whole workflow.
 - Zero `<script>` tags in output — absolute, no exceptions. Zero plugins. Hand-written meta tags in `_includes/head.html`.
