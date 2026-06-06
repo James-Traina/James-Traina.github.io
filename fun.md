@@ -7,19 +7,27 @@ permalink: /fun/
 
 ## UChicago 2017 Skit Show
 
-I organized comedy videos for the Economics Department. Some highlights:
+I was an organizer for the [UChicago 2017 Skit Show](https://youtube.com/channel/UCom_mS8bzak0BGIWeg6V_Gg) in the Economics Department. Check out our videos!
 
-+ **le bonhomme** -- French expressions gone wrong
-+ **Math Camp** -- the PhD student arrival experience
-+ **eXperiMintZ** -- natural experiments, naturally
-+ **STRUCTURAL BREAK** -- women in economics
-+ **eXtenZe** -- the tenure clock, ticking
-+ **The Basement Project** -- if you know the Chicago basement, you know
++ [le bonhomme](https://youtu.be/tO21Ml6EkJU) \| mon petit chou!
++ [Math Camp](https://youtu.be/Y6KYIBAzoqQ) \| Starting Your PhD
++ [eXperiMintZ](https://youtu.be/6xym4HtEJvk) \| Natural Experiments
++ [STRUCTURAL BREAK](https://youtu.be/-VtQcWzSMi8) \| Women in Economics
++ [eXtenZe](https://youtu.be/qPFB2r9SgVY) \| Tenure Clocks
++ [The Basement Project](https://youtu.be/MS-GPzMXeI8) \| Chicago Inside Jokes
 
 ## Capitalisn't
 
-My advisor Luigi Zingales co-hosts <a href="https://www.capitalisnt.com/" target="_blank" rel="noopener noreferrer">Capitalisn't</a>, a podcast about what's working in capitalism and what isn't. Recommended episodes on labor markets, antitrust, the gender wage gap, and economic research methodology.
+One of my advisors, [Luigi Zingales](https://faculty.chicagobooth.edu/luigi-zingales), co-hosts an excellent podcast called [Capitalisn't](https://capitalisnt.com/). For economists by economists:
+
++ [Can Labor Markets Save Capitalism? With David Autor](https://capitalisnt.com/episodes/can-labor-markets-save-capitalism-with-david-autor)
++ [How Antitrust Failed Workers With Eric Posner](https://www.capitalisnt.com/episodes/how-antitrust-failed-workers-with-eric-posner)
++ [Is Discrimination Still Causing The Gender Pay Gap With Claudia Goldin](https://capitalisnt.com/episodes/is-discrimination-still-causing-the-gender-pay-gap-with-claudia-goldin)
++ [Economic Research: Nothing Precisely or Precisely Nothing?](https://www.capitalisnt.com/episodes/saying-nothing-precisely-or-precisely-nothing-in-economics)
 
 ## Economics Twitter Bots
 
-Two bots worth following: one generates fake econ abstracts, another posts random FRED graphs. Both are funnier than they should be.
+Short list of hilarious Twitter bots made by friends:
+
++ [Econ Abstracts](https://twitter.com/econabstracts) (by [Jordan Rosenthal-Kay](https://jrosenthalkay.github.io/))
++ [Every FRED Graph](https://twitter.com/everyfredgraph) (by [Ben Marrow](https://benmarrow.com/))

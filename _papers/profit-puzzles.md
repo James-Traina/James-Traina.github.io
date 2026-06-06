@@ -9,4 +9,4 @@ links:
 summary: "Why have public-firm profit rates fallen while aggregate profits rose? Private-firm profitability has increased, explaining the gap."
 selected: true
 ---
-Why have public-firm profit rates fallen while aggregate profits rose? National accounts include all firms; financial markets track only public ones. This paper shows that private-firm profitability has increased since 1980, explaining the divergent trends in profit rates across these two measurement approaches.
+Why are aggregate profit rates and factor shares divorced from financial-market measures of the cost of capital? We propose a novel explanation: National accounts track all firms, while financial markets track public firms only. In contrast to stable aggregate profits rates, we show public-firm profit rates have fallen since 1980, matching financial markets and suggesting low market power. The public-firm share of capital is stable; implied private-firm profit rates have risen. Size and sector differences cannot explain the divergence, though R&D intensity or capital wedges might. Our results indicate substantial biases in extrapolating public-firm trends to the aggregate economy.
