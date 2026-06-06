@@ -1,2 +1,9 @@
 _site/
-
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
+.DS_Store
+.playwright-mcp/
+.serena/
