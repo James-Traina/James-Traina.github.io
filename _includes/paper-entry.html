@@ -3,7 +3,7 @@
   <h3 class="paper-title"><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
   <p class="paper-meta">
     <span class="paper-authors">{% include author-list.html authors=paper.authors %}</span>
-    {%- if paper.venue %} <span class="paper-venue">{{ paper.venue }}</span>{% endif %}
+    {%- if paper.venue %}<span class="paper-venue">{{ paper.venue }}</span>{% endif %}
   </p>
   {% if paper.summary %}<p class="paper-summary">{{ paper.summary | smartify }}</p>{% endif %}
   <div class="paper-links">

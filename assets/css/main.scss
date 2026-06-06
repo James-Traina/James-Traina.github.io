@@ -95,7 +95,7 @@ a {
   object-fit: cover;
 }
 
-.profile-name {
+.profile .profile-name {
   margin: var(--gap) 0 0;
   font-size: 28px;
 }
@@ -156,7 +156,6 @@ a {
   padding: var(--gap) 0;
   border-bottom: 1px solid var(--border);
 }
-.paper-entry:last-of-type { border-bottom: none; }
 
 .paper-title { margin: 0; font-size: 19px; }
 .paper-title a:hover { color: var(--link); }
@@ -188,7 +187,6 @@ a {
   padding: var(--gap) 0;
   border-bottom: 1px solid var(--border);
 }
-.course-entry:last-of-type { border-bottom: none; }
 
 .course-entry h2 { margin: 0; font-size: 20px; }
 
