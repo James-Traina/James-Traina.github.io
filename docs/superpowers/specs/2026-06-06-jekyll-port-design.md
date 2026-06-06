@@ -9,12 +9,15 @@
 These were settled explicitly during brainstorming and are not open questions:
 
 1. **Jekyll, not Hugo.** James chose to rebuild in Jekyll despite the completed
-   Hugo migration on `hugo-migration`. That branch becomes a content source,
-   then gets deleted after ship. CLAUDE.md's Hugo stack section is outdated
+   Hugo migration. Content source is pinned at commit `fd98409` (the
+   `hugo-migration` tip); the branch is retained as the reachable reference to
+   that commit — no deletion step. CLAUDE.md's Hugo stack section is outdated
    and will be rewritten (see §6).
-2. **Native GitHub Pages build.** Push markdown, GitHub builds. Only
-   whitelisted plugins (we use `jekyll-seo-tag` only). No CI workflow, no
-   committed build output, no submodules, no local toolchain required to edit.
+2. **Native GitHub Pages build.** Push markdown, GitHub builds. Zero plugins:
+   a hand-written `<title>` and meta description (two lines in `head.html`)
+   replace `jekyll-seo-tag`, keeping the no-`<script>` invariant absolute. No
+   CI workflow, no committed build output, no submodules, no local toolchain
+   required to edit.
 3. **Bespoke minimal theme.** ~8 layout/include files plus one stylesheet.
    No theme dependency (minima, academicpages, and al-folio all rejected:
    al-folio needs non-whitelisted plugins; academicpages is the 29k-line
@@ -50,7 +53,7 @@ _layouts/
   list.html         # grouped collection index
   single.html       # one paper page
 _includes/
-  head.html         # meta, seo-tag, css link
+  head.html         # title, meta description, css link
   header.html       # site name + nav
   footer.html       # minimal footer
 _papers/            # 12 files, see §3
@@ -82,7 +85,8 @@ selected: false      # homepage feature flag
 ```
 
 Body = abstract (plus award notes where they exist). Content source:
-`git show hugo-migration:content/papers/<slug>/index.md`.
+`git show fd98409:content/papers/<slug>/index.md` (immutable pin; the
+`hugo-migration` branch head points at this commit).
 
 ### Paper inventory (complete, verified against Google Site)
 
@@ -134,9 +138,10 @@ abstract justifies a page.
   James bolded, venue + year, row of small link buttons opening in new tabs.
 - **From academicpages (idea only):** structured publication front matter,
   collection-driven architecture.
-- One stylesheet `assets/css/main.scss` (~300 lines). CSS custom properties
-  use PaperMod's names (`--gap`, `--radius`, `--border`, `--primary`,
-  `--secondary`, `--content`) so CLAUDE.md's design system reads unchanged.
+- One stylesheet `assets/css/main.scss` (~300 lines) defining site-local CSS
+  custom properties (`--gap`, `--radius`, `--border`, `--primary`,
+  `--secondary`, `--content`). Generic CSS vocabulary owned by this site —
+  not a PaperMod compatibility layer; no PaperMod semantics are assumed.
 - CLAUDE.md design-system rules apply verbatim: 0.15s ease transitions on all
   interactive elements; 10px/16px button padding; 4px/8px border-radius
   scale; `#2563eb` content links (hover `#1d4ed8`); letter-spacing 0.05em on
@@ -154,7 +159,7 @@ the Google Site homepage (googleusercontent image URL) and save as
 ## 5. Verification
 
 1. `bundle exec jekyll build` exits 0, no warnings, output contains no
-   `<script` tags.
+   `<script` tags — absolute, no JSON-LD carve-out (we run zero plugins).
 2. `jekyll serve` + Playwright screenshots of every page at 1280px and 390px,
    reviewed against the design rules above.
 3. curl pass over every external link (paper PDFs, SSRN, DOI, course site,
@@ -166,10 +171,12 @@ the Google Site homepage (googleusercontent image URL) and save as
 
 Rewrite Technical Stack, Config Decisions, and Deployment sections for
 Jekyll + native Pages (push-to-build, no `public/`, no Hugo). Update the
-"What Not To Do" Hugo references. Voice rules, design system, and site
-structure sections survive unchanged. The nav spec line changes from
-"Research / Teaching / About" to "Research / Teaching / Fun" to match what
-was actually built and approved.
+"What Not To Do" Hugo references. Voice rules and site structure survive
+unchanged, except the nav spec line changes from "Research / Teaching /
+About" to "Research / Teaching / Fun" to match what was built and approved.
+The design-system rules survive with their values intact, but reworded to
+reference the site's own CSS tokens — e.g. "Respect PaperMod's variable
+system" becomes "Use the site's CSS variables." No PaperMod framing remains.
 
 ## Out of Scope (YAGNI)
 
