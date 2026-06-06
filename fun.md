@@ -18,7 +18,7 @@ I organized comedy videos for the Economics Department. Some highlights:
 
 ## Capitalisn't
 
-My advisor Luigi Zingales co-hosts [Capitalisn't](https://www.capitalisnt.com/), a podcast about what's working in capitalism and what isn't. Recommended episodes on labor markets, antitrust, the gender wage gap, and economic research methodology.
+My advisor Luigi Zingales co-hosts <a href="https://www.capitalisnt.com/" target="_blank" rel="noopener noreferrer">Capitalisn't</a>, a podcast about what's working in capitalism and what isn't. Recommended episodes on labor markets, antitrust, the gender wage gap, and economic research methodology.
 
 ## Economics Twitter Bots
 
