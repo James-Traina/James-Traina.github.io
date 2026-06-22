@@ -2,7 +2,7 @@ title: James Traina
 description: "James Traina — Assistant Professor of Finance, NYU Stern Abu Dhabi. Research on markups, market power, and firm behavior."
 url: "https://james-traina.github.io"
 
-permalink: pretty
+permalink: pretty   # trailing-slash URLs; 404.html opts out via its own permalink
 markdown: kramdown
 
 collections:
@@ -24,3 +24,4 @@ exclude:
   - vendor
   - docs
   - CLAUDE.md
+  - README.md

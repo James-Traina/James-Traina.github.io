@@ -1,6 +1,10 @@
 {%- assign authors = include.authors -%}
 {%- for a in authors -%}
   {%- if forloop.last and forloop.length > 1 %}and {% endif -%}
-  {%- if a == "James Traina" -%}<strong>{{ a }}</strong>{%- else -%}{{ a }}{%- endif -%}
+  {%- if a == "James Traina" -%}<strong>{{ a }}</strong>
+  {%- else -%}
+    {%- assign coauthor_url = site.data.coauthors[a] -%}
+    {%- if coauthor_url -%}<a href="{{ coauthor_url }}" target="_blank" rel="noopener noreferrer">{{ a }}</a>{%- else -%}{{ a }}{%- endif -%}
+  {%- endif -%}
   {%- unless forloop.last -%}{%- if forloop.length == 2 %} {% else %}, {% endif -%}{%- endunless -%}
 {%- endfor -%}

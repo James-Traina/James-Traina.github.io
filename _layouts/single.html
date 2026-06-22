@@ -4,10 +4,10 @@ layout: default
 <article class="paper">
   <h1 class="page-title">{{ page.title }}</h1>
   <p class="paper-meta">
-    <span class="paper-authors">{% include author-list.html authors=page.authors %}</span>
+    {% include author-list.html authors=page.authors %}
     {%- if page.venue %}<span class="paper-venue">{{ page.venue }}</span>{% endif %}
   </p>
-  <div class="paper-links">
+  <div class="entry-links">
     {% for link in page.links %}<a class="button button-small" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>{% endfor %}
   </div>
   <div class="content">{{ content }}</div>

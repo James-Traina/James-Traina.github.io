@@ -11,6 +11,6 @@ permalink: /teaching/
   <h2>{{ course.title }}</h2>
   <p class="course-meta">{{ course.meta }}</p>
   <p>{{ course.summary }}</p>
-  <div class="paper-links"><a class="button button-small" href="{{ course.link.url }}" target="_blank" rel="noopener noreferrer">{{ course.link.label }}</a></div>
+  <div class="entry-links"><a class="button button-small" href="{{ course.link.url }}" target="_blank" rel="noopener noreferrer">{{ course.link.label }}</a></div>
 </article>
 {% endfor %}
