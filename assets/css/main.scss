@@ -58,7 +58,15 @@ a:focus-visible,
 }
 
 .main h1 { font-size: 26px; margin: calc(var(--gap) * 1.5) 0 0; }
-.main h2 { font-size: 21px; margin: calc(var(--gap) * 1.5) 0 0; }
+
+/* Section headers: a rule and extra space above set each section apart
+   from the item titles beneath it (course titles opt out below). */
+.main h2 {
+  font-size: 21px;
+  margin: calc(var(--gap) * 2) 0 calc(var(--gap) * 0.75);
+  padding-bottom: calc(var(--gap) * 0.4);
+  border-bottom: 1px solid var(--border);
+}
 
 /* Prose links: distinct blue. Buttons opt out via :not(). */
 .main p a:not(.button),
@@ -196,7 +204,7 @@ a:focus-visible,
   border-bottom: 1px solid var(--border);
 }
 
-.course-entry h2 { margin: 0; font-size: 20px; }
+.course-entry h2 { margin: 0; font-size: 20px; padding-bottom: 0; border-bottom: none; }
 
 .course-meta {
   margin: 4px 0 0;
