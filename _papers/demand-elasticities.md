@@ -1,5 +1,5 @@
 ---
-title: "Seven Million Demand Elasticities"
+title: "Several Million Demand Elasticities"
 authors: ["Jordan Rosenthal-Kay", "Uyen Tran", "James Traina"]
 date: 2024-03-01
 category: working
