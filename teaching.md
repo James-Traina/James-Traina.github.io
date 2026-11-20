@@ -3,7 +3,7 @@ layout: default
 title: Teaching
 permalink: /teaching/
 ---
-# Teaching
+<h1>Teaching</h1>
 
 {% assign courses = site.courses | sort: "date" | reverse %}
 {% for course in courses %}
@@ -11,6 +11,6 @@ permalink: /teaching/
   <h2>{{ course.title }}</h2>
   <p class="course-meta">{{ course.meta }}</p>
   <p>{{ course.summary }}</p>
-  <div class="entry-links"><a class="button button-small" href="{{ course.link.url }}" target="_blank" rel="noopener noreferrer">{{ course.link.label }}</a></div>
+  {% if course.link and course.link.url %}<div class="entry-links"><a href="{{ course.link.url }}" target="_blank" rel="noopener noreferrer">{{ course.link.label }}</a></div>{% endif %}
 </article>
 {% endfor %}

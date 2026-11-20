@@ -8,3 +8,5 @@ Gemfile.lock
 .playwright-mcp/
 .serena/
 .claude/
+notes/
+.agents/

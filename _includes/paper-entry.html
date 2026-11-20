@@ -1,12 +1,45 @@
 {%- assign paper = include.paper -%}
+{%- assign primary_link = paper.links | first -%}
+{%- capture coauthors_html %}{% include author-list.html authors=paper.authors %}{% endcapture -%}
+{%- assign coauthors_html = coauthors_html | strip -%}
+{%- assign abstract_html = paper.content | strip -%}
 <article class="paper-entry">
-  <h3 class="paper-title"><a href="{{ paper.url | relative_url }}">{{ paper.title }}</a></h3>
+  <h3 class="paper-title">
+    {%- if primary_link -%}
+      <a href="{{ primary_link.url }}" target="_blank" rel="noopener noreferrer">{{ paper.title | smartify }}</a>
+    {%- else -%}
+      {{ paper.title | smartify }}
+    {%- endif -%}
+  </h3>
+  {%- if coauthors_html != "" or paper.venue %}
   <p class="paper-meta">
-    {% include author-list.html authors=paper.authors %}
-    {%- if paper.venue %}<span class="paper-venue">{{ paper.venue }}</span>{% endif %}
+    {%- if coauthors_html != "" %}{{ coauthors_html }}{% endif -%}
+    {%- if coauthors_html != "" and paper.venue %}<span class="meta-sep" aria-hidden="true">·</span>{% endif -%}
+    {%- if paper.venue %}<span class="paper-venue">{{ paper.venue }}</span>{% endif -%}
   </p>
-  {% if paper.summary %}<p class="paper-summary">{{ paper.summary | smartify }}</p>{% endif %}
-  <div class="entry-links">
-    {% for link in paper.links %}<a class="button button-small" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>{% endfor %}
+  {%- endif %}
+  {%- if paper.honors %}
+  <p class="paper-honors">{{ paper.honors | smartify }}</p>
+  {%- endif %}
+  {%- if include.show_summary and paper.summary %}
+  <p class="paper-summary">{{ paper.summary | smartify }}</p>
+  {%- endif %}
+  {%- if paper.links.size > 0 or abstract_html != "" %}
+  <div class="paper-actions">
+    {%- if paper.links.size > 0 %}
+    <span class="entry-links">
+      {%- for link in paper.links -%}
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+        {%- unless forloop.last %}<span class="link-sep" aria-hidden="true">·</span>{% endunless -%}
+      {%- endfor -%}
+    </span>
+    {%- endif %}
+    {%- if abstract_html != "" %}
+    <details class="paper-abstract">
+      <summary>Abstract</summary>
+      <div class="abstract-body">{{ paper.content }}</div>
+    </details>
+    {%- endif %}
   </div>
+  {%- endif %}
 </article>

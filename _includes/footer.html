@@ -1,3 +1,6 @@
 <footer class="footer">
-  <span>© {{ 'now' | date: "%Y" }} {{ site.title }}</span>
+  <div class="footer-inner">
+    <span>© {{ 'now' | date: "%Y" }} {{ site.title }}</span>
+    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+  </div>
 </footer>

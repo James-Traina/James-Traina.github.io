@@ -1,22 +1,17 @@
 title: James Traina
-description: "James Traina — Assistant Professor of Finance, NYU Stern Abu Dhabi. Research on markups, market power, and firm behavior."
+description: "James Traina — Assistant Professor of Finance, NYU Stern Abu Dhabi. Research on markups, markdowns, market power, and firm behavior."
 url: "https://james-traina.github.io"
+email: "james.traina@nyu.edu"
+cv_url: "https://drive.google.com/file/d/1WMr_ua2RZnOMaluS_mRwDkQT8z8FeTrv/view"
 
 permalink: pretty   # trailing-slash URLs; 404.html opts out via its own permalink
 markdown: kramdown
 
 collections:
   papers:
-    output: true
-    permalink: /papers/:name/
+    output: false
   courses:
     output: false
-
-defaults:
-  - scope:
-      type: papers
-    values:
-      layout: single
 
 exclude:
   - Gemfile
@@ -25,3 +20,8 @@ exclude:
   - docs
   - CLAUDE.md
   - README.md
+  - notes
+  - .agents
+  - .claude
+  - .playwright-mcp
+  - .serena

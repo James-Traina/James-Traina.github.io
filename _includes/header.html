@@ -1,10 +1,11 @@
 <header class="header">
   <div class="header-inner">
     <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav class="nav">
-      <a href="{{ '/research/' | relative_url }}">Research</a>
-      <a href="{{ '/teaching/' | relative_url }}">Teaching</a>
-      <a href="{{ '/fun/' | relative_url }}">Fun</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="{{ '/research/' | relative_url }}"{% if page.url == '/research/' %} aria-current="page"{% endif %}>Research</a>
+      <a href="{{ '/teaching/' | relative_url }}"{% if page.url == '/teaching/' %} aria-current="page"{% endif %}>Teaching</a>
+      <a href="{{ '/fun/' | relative_url }}"{% if page.url == '/fun/' %} aria-current="page"{% endif %}>Fun</a>
+      <a href="{{ site.cv_url }}" target="_blank" rel="noopener noreferrer">CV</a>
     </nav>
   </div>
 </header>

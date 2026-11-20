@@ -1,10 +1,14 @@
-{%- assign authors = include.authors -%}
-{%- for a in authors -%}
+{%- assign coauthors = "" | split: "" -%}
+{%- for a in include.authors -%}
+  {%- unless a == "James Traina" -%}
+    {%- assign coauthors = coauthors | push: a -%}
+  {%- endunless -%}
+{%- endfor -%}
+{%- if coauthors.size > 0 -%}
+with {% for a in coauthors -%}
   {%- if forloop.last and forloop.length > 1 %}and {% endif -%}
-  {%- if a == "James Traina" -%}<strong>{{ a }}</strong>
-  {%- else -%}
-    {%- assign coauthor_url = site.data.coauthors[a] -%}
-    {%- if coauthor_url -%}<a href="{{ coauthor_url }}" target="_blank" rel="noopener noreferrer">{{ a }}</a>{%- else -%}{{ a }}{%- endif -%}
-  {%- endif -%}
+  {%- assign coauthor_url = site.data.coauthors[a] -%}
+  {%- if coauthor_url -%}<a class="coauthor-link" href="{{ coauthor_url }}" target="_blank" rel="noopener noreferrer">{{ a }}</a>{%- else -%}{{ a }}{%- endif -%}
   {%- unless forloop.last -%}{%- if forloop.length == 2 %} {% else %}, {% endif -%}{%- endunless -%}
 {%- endfor -%}
+{%- endif -%}
